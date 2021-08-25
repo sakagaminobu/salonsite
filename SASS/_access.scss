@@ -1,0 +1,49 @@
+#access {
+    .inner {
+        background: #A193861F;
+        padding-left: 0;
+        @include sp {
+            height: 530px;
+            margin-top: 500px;
+        }
+        .title {
+            padding-left: 107px;
+            @include sp {
+                padding-left: 0;
+                margin-top: 550px;
+            }
+        }
+    }
+}
+
+.access-wrap {
+    display: flex;
+    
+    @include sp {
+        flex-direction: column-reverse;
+    }
+}
+
+.access-info {
+    width: 50%;
+    background-color: #D0C5BA;
+    padding: 104px;
+    line-height: 24px;
+    @include sp {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+.place {
+    color: #00000038;
+    margin-bottom:30px;
+    font-size: 24px;
+}
+
+.ai-explanation {
+    color: #fff;
+    p:nth-child(n) {
+        margin-bottom: 23px;
+    }
+}

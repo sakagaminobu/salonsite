@@ -1,0 +1,456 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+a:visited {
+  color: inherti; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/*# sourceMappingURL=reset.css.map */
+body {
+  width: 100%;
+  height: 600px; }
+  @media (max-width: 500px) {
+    body {
+      height: 100%; } }
+
+.inner {
+  width: 100%;
+  height: 960px;
+  padding: 200px 107px 70px;
+  background: linear-gradient(180deg, #A193861F 0%, #A193861F 40%, #A1938689 40%, #A1938689 100%); }
+  @media (max-width: 500px) {
+    .inner {
+      padding: 0;
+      height: 1720px; } }
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 11px;
+  font-size: 18px;
+  color: #707070;
+  letter-spacing: 5.4px; }
+  @media (max-width: 500px) {
+    .title {
+      margin-top: 0;
+      padding-top: 70px;
+      margin-bottom: 60px;
+      margin-left: 5%; } }
+  .title:after {
+    display: block;
+    width: 100px;
+    content: "";
+    border-top: 1px solid #707070;
+    margin-left: 20px; }
+
+header {
+  width: 100%; }
+  @media (min-width: 501px) {
+    header {
+      position: absolute;
+      height: 38px; } }
+  @media (max-width: 500px) {
+    header {
+      height: 70px; } }
+
+.header-wrap {
+  display: flex; }
+  @media (min-width: 501px) {
+    .header-wrap {
+      padding: 77px; } }
+  @media (max-width: 500px) {
+    .header-wrap {
+      justify-content: space-between;
+      margin: 30px; } }
+
+.header-title {
+  text-align: center;
+  font-weight: bold;
+  margin-right: 20px;
+  font-size: 2rem; }
+  @media (max-width: 500px) {
+    .header-title {
+      text-align: left;
+      display: inline-block; } }
+
+ul {
+  display: flex;
+  width: 381px;
+  height: 32px;
+  line-height: 32px; }
+  @media (max-width: 500px) {
+    ul {
+      display: none; } }
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  color: #707070; }
+  li::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 1px;
+    bottom: 1px;
+    left: 0;
+    background: black;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s; }
+  li:hover::after {
+    transform: scale(1, 1); }
+  li:hover {
+    color: black; }
+
+.ham {
+  display: none; }
+  @media (max-width: 500px) {
+    .ham {
+      display: flex;
+      width: 25px;
+      height: 25px;
+      justify-content: space-between;
+      flex-direction: column;
+      float: right; }
+      .ham span {
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background-color: black; } }
+
+.fv-wrap {
+  display: flex;
+  width: 100%;
+  height: 800px;
+  text-align: center; }
+  .fv-wrap__message {
+    width: 70%;
+    padding: 296px 105px 0; }
+    @media (max-width: 500px) {
+      .fv-wrap__message {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        color: #fff;
+        position: absolute;
+        padding: 200px 40px; } }
+    .fv-wrap__message h2 {
+      font-size: 32px;
+      margin-left: 60px;
+      margin-bottom: 80px; }
+      @media (max-width: 500px) {
+        .fv-wrap__message h2 {
+          margin: 0 0 0 50px;
+          font-size: 23px; } }
+    .fv-wrap__message p {
+      font-size: 35px;
+      font-family: Zapfino; }
+      @media (max-width: 500px) {
+        .fv-wrap__message p {
+          padding: 99px 0 50px 50px;
+          font-size: 28px;
+          letter-spacing: 2.8px; } }
+  .fv-wrap__img {
+    width: 100%; }
+    .fv-wrap__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+      @media (max-width: 500px) {
+        .fv-wrap__img img {
+          object-fit: none;
+          object-position: left top; } }
+
+@media (max-width: 500px) {
+  #concept .inner {
+    height: 595px; } }
+@media (max-width: 500px) {
+  #concept .inner .title {
+    padding: 66px 22px 0; } }
+
+.concept-wrap {
+  width: 100%; }
+  @media (max-width: 500px) {
+    .concept-wrap {
+      width: 80%;
+      margin: 0 auto; } }
+  .concept-wrap__img {
+    display: flex; }
+    .concept-wrap__img .img1 {
+      margin-right: 11px;
+      width: 60%;
+      object-fit: cover; }
+      @media (max-width: 500px) {
+        .concept-wrap__img .img1 {
+          width: 50%;
+          height: 205px;
+          margin-right: 11px;
+          object-fit: cover;
+          object-position: right; } }
+    .concept-wrap__img .img2 {
+      width: 40%; }
+      @media (max-width: 500px) {
+        .concept-wrap__img .img2 {
+          width: 50%;
+          height: 205px;
+          object-fit: cover; } }
+  .concept-wrap__contents {
+    display: flex;
+    color: white; }
+    @media (min-width: 501px) {
+      .concept-wrap__contents {
+        margin: 70px 54px 0px;
+        text-align: left; } }
+    @media (max-width: 500px) {
+      .concept-wrap__contents {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 auto; } }
+    .concept-wrap__contents h2 {
+      margin-right: 54px;
+      font-size: 34px;
+      font-family: "ヒラギノ明朝 Pro";
+      letter-spacing: 16px; }
+      @media (max-width: 500px) {
+        .concept-wrap__contents h2 {
+          font-size: 18px;
+          padding: 50px 0 18px;
+          margin: 0; } }
+    .concept-wrap__contents p {
+      width: 50%;
+      height: 130px;
+      font-weight: normal;
+      font-size: 16px; }
+      @media (max-width: 500px) {
+        .concept-wrap__contents p {
+          width: 100%; } }
+
+#menu .inner {
+  background: #fff;
+  width: 100%; }
+
+.menu-wrap {
+  display: flex; }
+  @media (max-width: 500px) {
+    .menu-wrap {
+      justify-content: space-between;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto 60px; } }
+
+.menu-item {
+  text-align: center; }
+  @media (min-width: 501px) {
+    .menu-item {
+      width: 90%; }
+      .menu-item:nth-child(2) {
+        margin: 0 125px; } }
+  @media (max-width: 500px) {
+    .menu-item:nth-child(n) {
+      margin: 0 0 50px; } }
+  .menu-item__img {
+    width: 100%;
+    height: 50%; }
+    .menu-item__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+.cut-kinds {
+  padding: 37px 30px;
+  font-size: 27px; }
+
+.txt {
+  margin-bottom: 34px; }
+
+.price {
+  float: right; }
+
+#access .inner {
+  background: #A193861F;
+  padding-left: 0; }
+  @media (max-width: 500px) {
+    #access .inner {
+      height: 530px;
+      margin-top: 500px; } }
+  #access .inner .title {
+    padding-left: 107px; }
+    @media (max-width: 500px) {
+      #access .inner .title {
+        padding-left: 0;
+        margin-top: 550px; } }
+
+.access-wrap {
+  display: flex; }
+  @media (max-width: 500px) {
+    .access-wrap {
+      flex-direction: column-reverse; } }
+
+.access-info {
+  width: 50%;
+  background-color: #D0C5BA;
+  padding: 104px;
+  line-height: 24px; }
+  @media (max-width: 500px) {
+    .access-info {
+      width: 100%;
+      padding: 30px 20px; } }
+
+.place {
+  color: #00000038;
+  margin-bottom: 30px;
+  font-size: 24px; }
+
+.ai-explanation {
+  color: #fff; }
+  .ai-explanation p:nth-child(n) {
+    margin-bottom: 23px; }
+
+.footer-wrap {
+  width: 80%;
+  margin: 0 auto; }
+
+.fw-top {
+  height: 25%;
+  border-bottom: 1px solid #7070704D; }
+  @media (max-width: 500px) {
+    .fw-top {
+      height: 8%; } }
+
+.fw-bottom {
+  display: flex;
+  padding: 80px 0 60px;
+  justify-content: space-between; }
+  @media (max-width: 500px) {
+    .fw-bottom {
+      flex-direction: column-reverse; } }
+
+.footer-logo {
+  margin-right: 26px;
+  color: #7070704D;
+  font-size: 32px; }
+  @media (max-width: 500px) {
+    .footer-logo {
+      display: flex;
+      font-size: 18px;
+      justify-content: space-between;
+      margin-right: 0; } }
+
+.reserve-btn {
+  color: #707070; }
+
+.fa-twitter {
+  margin: 0 8px 0 30px;
+  color: black; }
+
+.fa-facebook-f {
+  border: 1px solid black;
+  color: #fff;
+  background-color: black; }
+
+.reserve-btn {
+  padding: 10px 41px;
+  border: 1px solid #707070;
+  letter-spacing: 1.8px; }
+  @media (max-width: 500px) {
+    .reserve-btn {
+      margin: 0 auto 62px; } }
+
+/*# sourceMappingURL=main.css.map */

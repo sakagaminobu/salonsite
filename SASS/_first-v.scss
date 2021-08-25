@@ -1,0 +1,50 @@
+.fv-wrap {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    text-align: center;
+    &__message {
+        width: 70%;
+        padding: 296px 105px 0;
+        @include sp{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            color: #fff;
+            position:absolute;
+            padding: 200px 40px;
+        }
+        h2 {
+            
+            @include sp {
+                margin: 0 0 0 50px;
+                font-size: 23px;
+            }
+            font-size: 32px;
+            margin-left: 60px;
+            margin-bottom: 80px;
+        }
+        p {
+            @include sp {
+                padding: 99px 0 50px 50px;
+                font-size: 28px;
+                letter-spacing: 2.8px;
+            }
+                font-size: 35px;
+                font-family: Zapfino;
+        }
+    }
+    &__img {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include sp {
+                object-fit: none;
+                object-position: left top;
+            }
+        }
+    }
+}
